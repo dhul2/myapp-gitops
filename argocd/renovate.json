@@ -1,0 +1,26 @@
+{
+    "extends": [
+        "config:base"
+    ],
+    "enabledManagers": [
+        "dockerfile",
+        "kubernetes"
+    ],
+    "kubernetes": {
+        "fileMatch": [
+            "apps/.+\\.ya?ml$"
+        ]
+    },
+    "packageRules": [
+        {
+            "matchDatasources": [
+                "docker"
+            ],
+            "matchPackageNames": [
+                "ghcr.io/dhul2/myapp"
+            ],
+            "groupName": "myapp image updates",
+            "automerge": false
+        }
+    ]
+}
