@@ -2,3 +2,6 @@ resources:
   - rollout.yaml
   - service-stable.yaml
   - service-canary.yaml
+images:
+  - name: ghcr.io/dhul2/myapp
+    newTag: dev
